@@ -1,0 +1,21 @@
+# Local test/scratch scripts - not part of the actual application
+test_ai.py
+test_ai2.py
+test_scoring.py
+test_pdf.py
+test_eslint.py
+test_static.py
+
+# Generated output, shouldn't be tracked
+reports/
+pr_report.pdf
+
+# Environment & secrets
+.env
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+.DS_Store
