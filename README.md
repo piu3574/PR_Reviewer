@@ -44,25 +44,26 @@ This project addresses that with a **hybrid pipeline**: deterministic static ana
 ---
 
 ## Architecture
-GitHub PR Link
-↓
-FastAPI Backend (GitHub API fetch, auth via PAT)
-↓
-Diff Parser + Full File Fetch (skips binaries/removed files)
-↓
-Static Analysis (pylint / bandit / eslint) → tool-verified findings
-↓
-AI Analysis (Gemini, grounded with static findings) → AI-inferred findings
-↓
-Deduplication (line-proximity + keyword overlap matching)
-↓
-Scoring Engine (deterministic weights + security risk floors)
-↓
-PostgreSQL (Supabase) ←→ PDF Report Generator (ReportLab)
-↓
-React Dashboard (submit, view, filter, download, history, chart)
 
----
+```
+GitHub PR Link
+      ↓
+FastAPI Backend (GitHub API fetch, auth via PAT)
+      ↓
+Diff Parser + Full File Fetch (skips binaries/removed files)
+      ↓
+Static Analysis (pylint / bandit / eslint) → tool-verified findings
+      ↓
+AI Analysis (Gemini, grounded with static findings) → AI-inferred findings
+      ↓
+Deduplication (line-proximity + keyword overlap matching)
+      ↓
+Scoring Engine (deterministic weights + security risk floors)
+      ↓
+PostgreSQL (Supabase) ←→ PDF Report Generator (ReportLab)
+      ↓
+React Dashboard (submit, view, filter, download, history, chart)
+```
 
 ## Tech Stack
 
@@ -115,6 +116,8 @@ The system was tested against several PRs with known, pre-identified issues to c
 ---
 
 ## Project Structure
+
+```
 PR_reviewer/
 ├── backend/
 │   ├── app/
@@ -130,11 +133,10 @@ PR_reviewer/
 │   ├── requirements.txt
 │   └── .env.example
 └── frontend/
-└── src/
-├── App.jsx               # Main dashboard (analyze + history views)
-└── App.css
-
----
+    └── src/
+        ├── App.jsx               # Main dashboard (analyze + history views)
+        └── App.css
+```
 
 ## Setup & Installation
 
